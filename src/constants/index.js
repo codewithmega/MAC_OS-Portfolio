@@ -62,6 +62,28 @@ const dockApps = [
         icon: "trash.png",
         canOpen: false,
     },
-]
+];
 
-export { navLinks, navIcons, dockApps };
+const INITIAL_Z_INDEX = 1000;
+
+const WINDOW_CONFIG = {
+    finder: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
+    contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
+    resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
+    safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
+    photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
+    terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
+    txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
+    imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
+    
+}
+
+// const locations = {
+//     work: WORK_LOCATION,
+//     about: ABOUT_LOCATION,
+//     resume: RESUME_LOCATION,
+//     trash: TRASH_LOCATION,
+
+// };
+
+export { navLinks, navIcons, dockApps , WINDOW_CONFIG, INITIAL_Z_INDEX};
