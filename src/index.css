@@ -69,3 +69,14 @@ body {
   width: 18px;
   height: 18px; 
 }
+
+#welcome {
+  height: 100vh;         
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+}
+.small-screen {
+  display: none;
+}
