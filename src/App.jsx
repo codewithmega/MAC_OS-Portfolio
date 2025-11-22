@@ -1,7 +1,8 @@
 import { Dock, Navbar, Welcome } from "#components";
+import { TerminalContextProvider } from "react-terminal";
 import GlassSurface from "#components/GlassSurface";
 import Silk from "#components/Silk";
-import Terminal from "#windows/Terminal";
+import Terminal from "#windows/TerminalBox";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 
@@ -21,7 +22,10 @@ const App = () => {
       />
       <Welcome className="" />
       <Dock />
+    <TerminalContextProvider>
       <Terminal />
+    </TerminalContextProvider>
+
     </main>
   );
 };

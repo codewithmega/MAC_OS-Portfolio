@@ -121,19 +121,31 @@ body {
   transform: translateX(-50%);
   width: min(760px, 90%);
   height: min(520px, 75%);
+  /* height: 450px; */
   background: linear-gradient(180deg, #ffffff, #fbfbfb);
   border-radius: 10px;
   border: 1px solid rgba(0,0,0,0.08);
   box-shadow: 0 20px 40px rgba(0,0,0,0.35);
   overflow: hidden;
 }
-.indow-header{
-  @apply flex items-center justify-between bg-gray-700 backdrop-blur-md p-2 px-4 select-none;
+.window {
+  display: flex;
+  flex-direction: row;
 }
+.window-header{
+  @apply flex items-center justify-between bg-gray-400 p-2 px-4 select-none;
+}
+
+#terminalEditor{
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  overflow: auto !important;
+}
+
 .window .window-title{
   @apply text-center font-semibold;
   width: min(760px, 90%);
-
 }
 
 @theme inline {

@@ -21,9 +21,11 @@
     "lucide-react": "^0.554.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-terminal": "^1.4.5",
     "react-tooltip": "^5.30.0",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.17",
+    "terminal-in-react": "^3.4.2",
     "three": "^0.181.2",
     "zustand": "^5.0.8"
   },

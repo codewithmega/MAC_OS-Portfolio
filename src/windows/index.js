@@ -1,3 +1,3 @@
-import Terminal from "./terminal.jsx";
+import TerminalBox from "./TerminalBox.jsx";
 
-export {Terminal};
+export {TerminalBox};
