@@ -79,16 +79,16 @@ const Welcome = () => {
     }, []);
 
   return (
-    <section id="welcome">
+    <section id="welcome" className="absolute bottom-5 left-1/2 -translate-x-1/2 z-50">
       <p ref={subtitleRef}>
         {renderText(
-          "Hey, I'm MEGA! Welcome to my",
+          "Welcome! to my Portfolio, I'm",
           "text-3xl font-georama text-white",
           100
         )}
       </p>
       <h1 ref={titleRef}>
-        {renderText("portfolio", "text-9xl italic font-georama text-white")}
+        {renderText("CodeWithMEGA", "text-9xl italic font-georama text-white")}
       </h1>
 
       <div className="small-screen">

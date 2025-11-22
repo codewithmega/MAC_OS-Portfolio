@@ -72,11 +72,38 @@ const WINDOW_CONFIG = {
     resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
     safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
     photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
-    terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
+    terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null, isMaximized: false },
     txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
     imgfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data:null },
     
-}
+};
+
+const techStack = [
+    {
+        category: "Frontend",
+        items: ["React", "Redux", "Tailwind CSS", "HTML5", "CSS3", "JavaScript", "TypeScript"]
+    },
+    {  
+        category: "Backend",
+        items: ["Node.js", "Express", "MongoDB", "SQL", "RESTful APIs"]
+    },
+    {
+        category: "Tools & Platforms",
+        items: ["Git", "GitHub", "Docker", "AWS", "Netlify", "Vercel"]
+    },
+    {
+        category: "Other",
+        items: ["Agile Methodologies", "Unit Testing", "CI/CD"]
+    },
+    {
+        category: "Design",
+        items: ["Figma", "Adobe XD", "Sketch"]
+    },
+    {
+        category: "Languages",
+        items: ["Python", "Java", "C++"]
+    }
+];
 
 // const locations = {
 //     work: WORK_LOCATION,
@@ -86,4 +113,4 @@ const WINDOW_CONFIG = {
 
 // };
 
-export { navLinks, navIcons, dockApps , WINDOW_CONFIG, INITIAL_Z_INDEX};
+export { navLinks, navIcons, dockApps , WINDOW_CONFIG, INITIAL_Z_INDEX, techStack};
