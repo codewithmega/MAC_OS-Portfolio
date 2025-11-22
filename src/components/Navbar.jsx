@@ -4,10 +4,10 @@ import dayjs from 'dayjs'
 
 const Navbar = () => {
   return (
-    <nav>
+    <div className='nav z-51'>
         <div>
             <img src="/public/images/logo.png" className='start_logo' alt="logo"/>
-            <p className='font-bold'>CodewithMEGA's Porfolio</p>
+            <p className='font-bold'>MEGA ✨</p>
 
             <ul>
                 {navLinks.map(({id, name}) => (
@@ -30,7 +30,7 @@ const Navbar = () => {
 
             <time>{dayjs().format("ddd MMM D h:mm A")}</time>
         </div>
-    </nav>
+    </div>
   )
 }
 
