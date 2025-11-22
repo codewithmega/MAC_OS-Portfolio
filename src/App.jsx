@@ -21,7 +21,7 @@ const App = () => {
         className="silk-animation"
       />
       <Welcome className="" />
-      <Dock />
+      <Dock className=""/>
     <TerminalContextProvider>
       <Terminal />
     </TerminalContextProvider>
