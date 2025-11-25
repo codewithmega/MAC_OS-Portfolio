@@ -5,7 +5,7 @@ import Silk from "#components/Silk";
 import Terminal from "#windows/TerminalBox";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
-import { Finder, Resume, Socials, Text } from "#windows";
+import { Finder, Gallery, Resume, Socials, Text } from "#windows";
 import Home from "#components/Home";
 
 gsap.registerPlugin(Draggable);
@@ -13,7 +13,7 @@ gsap.registerPlugin(Draggable);
 const App = () => {
   return (
     <main>
-      <Home className="z-99" />
+      <Home className="" />
 
       <Navbar />
       <Welcome className="" />
@@ -25,6 +25,7 @@ const App = () => {
       <Resume />
       <Finder />
       <Text />
+      <Gallery />
       <Silk
         speed={5}
         scale={1}

@@ -21,7 +21,7 @@ const Text = () => {
       >
         <div className="border-b border-gray-300 bg-white flex flex-row window-header p-0 mb-10 w-full fixed top-0 left-0 z-5">
           <div>
-            <WindowControls target="txtFile" />
+            <WindowControls target="txtfile" />
           </div>
           <PanelLeft className="ml-0 icon" />
 
@@ -46,7 +46,7 @@ const Text = () => {
         {subtitle ? (
             <>
             <div className="w-full"> 
-                <h3 className="text-lg">
+                <h3 className="text-lg p-4">
                     {subtitle}
                 </h3>
             </div>

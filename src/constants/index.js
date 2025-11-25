@@ -35,17 +35,17 @@ const dockApps = [
     {
         id: "safari",
         name: "Socials",
-        icon: "safari.png",
+        icon: "facetime.png",
         canOpen: true,
     },
     {
-        id: "photos",
+        id: "gallery",
         name: "Gallery",
         icon: "modern-photos.png",
         canOpen: true,
     },
     {
-        id: "contact",
+        id: "resume",
         name: "Contact",
         icon: "contact.png",
         canOpen: true,
@@ -71,6 +71,7 @@ const WINDOW_CONFIG = {
     contact: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     resume: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     safari: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
+    gallery: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     photos: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
     terminal: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null, isMaximized: false },
     txtfile: { isOpen: false, zIndex: INITIAL_Z_INDEX, data: null },
@@ -115,10 +116,10 @@ const WORK_LOCATION = {
         {
             id: 2,
             name: "Psuedo v2",
-            icon: "/icons/folder.png",
+            icon: "/icons/new-folder.png",
             kind: "folder",
+            windowPosition: "top-8 right-13",
             position: "top-10 left-5",
-            windowPosition: "top-[15vh] right-20",
             children: [
                 {
                     id: 3,
@@ -169,26 +170,20 @@ const WORK_LOCATION = {
         },
         {
             id: 6,
-            name: "Banana",
-            icon: "/icons/folder.png",
+            name: "Coming Soon...",
+            icon: "/icons/new-folder.png",
             kind: "folder",
             position: "top-10 left-90",
             windowPosition: "top-[15vh] right-20",
             children: [
                 {
                     id: 7,
-                    name: "Nike Project.txt",
+                    name: "What is coming soon.txt",
                     icon: "/icons/txt.png",
                     kind: "file",
                     fileType: "txt",
                     position: "top-5 left-10",
-                    description: [
-                        "The Nike BANANA Cost a lot more than Adidas bananas",
-                        "The Nike BANANA Cost a lot more than Adidas bananas",
-                        "The Nike BANANA Cost a lot more than Adidas bananas",
-                        "The Nike BANANA Cost a lot more than Adidas bananas",
-                        "The Nike BANANA Cost a lot more than Adidas bananas",
-                    ]
+                    subtitle: "Something is coming soon... - CodeWithMEGA"
                 },
             ],
         },
@@ -200,7 +195,7 @@ const WORK_LOCATION = {
 const ABOUT_LOCATION = {
     id: 8,
     type: "about",
-    name: "About",
+    name: "My Socials",
     icon: "/icons/user.png",
     kind: "folder",
     children: [
@@ -241,40 +236,50 @@ const ABOUT_LOCATION = {
 const RESUME_LOCATION = {
     id: 12,
     type: "resume",
-    name: "Resume",
+    name: "AI Revolution",
     icon: "/icons/txt.png",
     kind: "folder",
     children: [
         {
+            id: 22,
+            name: "Some AI Achievements.txt",
+            icon: "/icons/txt.png",
+            kind: "file",
+            fileType: "txt",
+            position: "top-5 left-40",
+            subtitle: `AI has reached major achievements in recent years. It can now understand and generate human like language create realistic images and videos and help doctors detect diseases earlier. AI also made progress in robotics self driving systems and game playing showing strong reasoning and decision making abilities. These achievements prove how fast AI is advancing and how deeply it is shaping technology and daily life.`
+        },
+        {
             id: 13,
-            name: "Nice Ecommerce Application",
-            icon: "/icons/folder.png",
+            name: "Top AI Secrets",
+            icon: "/icons/new-folder.png",
             kind: "folder",
             position: "top-10 left-5",
             windowPosition: "top-[15vh] right-20",
             children: [
                 {
                     id: 14,
-                    name: "Nike Project.txt",
+                    name: "How AI Learns.txt",
                     icon: "/icons/txt.png",
                     kind: "file",
                     fileType: "txt",
                     position: "top-5 left-10",
-                    description: [
-                        "The Nike BANANA Cost a lot more than Adidas bananas",
-                        "The Nike BANANA Cost a lot more than Adidas bananas",
-                        "The Nike BANANA Cost a lot more than Adidas bananas",
-                        "The Nike BANANA Cost a lot more than Adidas bananas",
-                        "The Nike BANANA Cost a lot more than Adidas bananas",
-                    ]
+                    subtitle: `AI learns by analyzing large amounts of data.  
+It uses a model to make predictions or decisions.  
+The model compares its predictions to correct answers.  
+It adjusts internal parameters based on errors it made.  
+This training repeats many times to improve performance.  
+Eventually the AI can make accurate predictions on new data.
+`
                 },
                 {
                     id: 15,
-                    name: "Nike Project.txt",
-                    icon: "/icons/txt.png",
+                    name: "Amazon HQ.jpeg",
+                    icon: "/icons/amazon-hq.jpeg",
                     kind: "file",
                     fileType: "txt",
-                    position: "top-5 left-10",
+                    image: "/icons/amazon-hq.jpeg",
+                    position: "top-10 left-50",
                     description: [
                         "The Nike BANANA Cost a lot more than Adidas bananas",
                         "The Nike BANANA Cost a lot more than Adidas bananas",
@@ -285,11 +290,27 @@ const RESUME_LOCATION = {
                 },
                 {
                     id: 16,
-                    name: "Nike Project.txt",
-                    icon: "/icons/txt.png",
+                    name: "BAGEL.png",
+                    icon: "/icons/google.jpg",
+                    image: "/icons/google.jpg",
                     kind: "file",
                     fileType: "txt",
-                    position: "top-5 left-10",
+                    position: "top-10 left-80",
+                    description: [
+                        "The Nike BANANA Cost a lot more than Adidas bananas",
+                        "The Nike BANANA Cost a lot more than Adidas bananas",
+                        "The Nike BANANA Cost a lot more than Adidas bananas",
+                        "The Nike BANANA Cost a lot more than Adidas bananas",
+                        "The Nike BANANA Cost a lot more than Adidas bananas",
+                    ]
+                },{
+                    id: 16,
+                    name: "Nvidia HQ.png",
+                    icon: "/icons/nvidia.jpg",
+                    image: "/icons/nvidia.jpg",
+                    kind: "file",
+                    fileType: "txt",
+                    position: "top-40 left-10",
                     description: [
                         "The Nike BANANA Cost a lot more than Adidas bananas",
                         "The Nike BANANA Cost a lot more than Adidas bananas",
@@ -308,13 +329,13 @@ const TRASH_LOCATION = {
     id: 17,
     type: "trash",
     name: "Trash",
-    icon: "/icons/trash.png",
+    icon: "/icons/bin.png",
     kind: "folder",
     children: [
         {
             id: 18,
             name: "Nice Ecommerce Application",
-            icon: "/icons/folder.png",
+            icon: "/icons/new-folder.png",
             kind: "folder",
             position: "top-10 left-5",
             windowPosition: "top-[15vh] right-20",
