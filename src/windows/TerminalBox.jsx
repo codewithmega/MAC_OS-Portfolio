@@ -1,28 +1,39 @@
 import { ReactTerminal } from "react-terminal";
 import { techStack } from "#constants";
 import WindowWrapper from "#hoc/WindowWrapper";
-import { Check } from "lucide-react";
+import { Check, Mouse } from "lucide-react";
 import React, { useRef } from "react";
 import WindowControls from "#components/WindowControls";
 
 const TerminalBox = () => {
-
   let customTitle = "MEGA";
 
   const ref = useRef(null);
 
   // Define commands here
   const commands = {
-    funfact: () => (
+    iwantone: () => (
       <>
         <div>
-          Fun Fact: btw this is my First React JS Project (tutorial from
-          JavaScript Mastery)
+          <h2>
+            <b style={{ color: "yellow" }}> Build Your own MAC OS Porfolio</b>
+          </h2>
+        </div>
+        <div>&nbsp;</div>
+        <div>
+          btw this is my First React JS Project (tutorial from JavaScript
+          Mastery). I couldn't afford the paid course so i had to follow through
+          with the video and made my own custom Styling and Scripting that would
+          be similar.
         </div>
         <div>&nbsp;</div>
         <div>Link: </div>
         <div>
-          <a href="https://www.youtube.com/watch?v=j9ZD_hlyHOA" target="_blank">
+          <a
+            href="https://www.youtube.com/watch?v=j9ZD_hlyHOA"
+            target="_blank"
+            style={{ color: "coral" }}
+          >
             <u>
               Build and Deploy a MacOS style Portfolio with React, GSAP &
               Tailwind - JavaScript Mastery on YouTube
@@ -38,19 +49,66 @@ const TerminalBox = () => {
     ),
     bio: () => (
       <>
-        <div>
-          Hi, I'm Timothy also know was CodeWithMEGA, a Beginner software
-          developer.
+        <pre style={{ color: "yellow" }}>{String.raw`
+ __    __  __  __       ______  __  ______    
+/\ "-./  \/\ \_\ \     /\  == \/\ \/\  __ \   
+\ \ \-./\ \ \____ \    \ \  __<\ \ \ \ \/\ \  
+ \ \_\ \ \_\/\_____\    \ \_____\ \_\ \_____\ 
+  \/_/  \/_/\/_____/     \/_____/\/_/\/_____/ 
+
+-------------------------------------------------
+      `}</pre>
+        <div className="flex flex-row">
+          <img src="../icons/me.gif" width="170" />
+          <div class="block">
+            <p>Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Timothy a.k.a CodeWithMEGA</p>
+            <p>Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19</p>
+            <p>Occupation: &nbsp;Student</p>
+            <p>Status: &nbsp;&nbsp;&nbsp;&nbsp; Available for Work <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (ready to learn anything)</p>
+          </div>
         </div>
+
+        <pre></pre>
 
         {/* <div>I'm currently a student at a University in Nigeria. I'm an all-round technology enthusiast. </div><div>My core competence is full-stack development, but I also have a fair bit of Computer Hardware, Graphics Design, Video Editing and Competitive E-Sport. My Esoe with 5+ years of experience in web development, app development, computer hardware, cloud computing, and game development. I specialize in building robust applications, cloud platforms, and cutting-edge robotics solutions.</div> */}
       </>
     ),
-    cd: (directory) => (
-      <div className="flex flex-col">
-        <span>changed path to:</span>
-        <span>{directory}</span>
-      </div>
+    stack: () => (
+      <>
+        <div className="flex flex-col gap-0">
+          <div>
+            <pre style={{ color: "cyan" }}>{String.raw`
+ __    __  __  __       ______  ______  ______  ______  __  __    
+/\ "-./  \/\ \_\ \     /\  ___\/\__  _\/\  __ \/\  ___\/\ \/ /    
+\ \ \-./\ \ \____ \    \ \___  \/_/\ \/\ \  __ \ \ \___\ \  _"-.  
+ \ \_\ \ \_\/\_____\    \/\_____\ \ \_\ \ \_\ \_\ \_____\ \_\ \_\ 
+  \/_/  \/_/\/_____/     \/_____/  \/_/  \/_/\/_/\/_____/\/_/\/_/ 
+                                                                  
+----------------------------------------------------------------------
+           `}</pre>
+          </div>
+          <div>
+            <pre>
+              {String.raw`
+Frontend              Backend
+-----------           ----------
+* HTML                * PHP (Laravel)
+* CSS                 * JavaScript (NodeJS, ExpresJS)
+* React JS            * Python
+                      * MySQL
+                      * MongoDB
+
+Mobile Development    Version Control
+-------------------   ----------------
+* React Native        * Git
+                      * Github
+
+I am also ready to learn new technologies 😁😁
+              `}
+            </pre>
+          </div>
+        </div>
+      </>
     ),
     help: () => (
       <>
@@ -63,14 +121,35 @@ const TerminalBox = () => {
         <div>
           <pre>{String.raw`
           bio           Displays information about me.
-          fun           Lists my technical skills.
+          stack         Lists my current techstack.
+          socials       Links to my social accounts.
           projects      Provides links to my projects.
-          resume        Provides a link to my resume.
+          resume        Provides a link to my resume. 
+                        (still working on it)
           clear         Clears the terminal screen.
-          help          Displays this help message.
+          help          Displays available commands.
+          iwantone      Link to build the same for yourself.
           `}</pre>
         </div>
         <div>&#8595; Scroll Down</div>
+      </>
+    ),
+    socials: () => (
+      <>
+        <pre
+          style={{
+            color: "lightgreen"
+          }}
+        >
+    __  ___         _____                     _             __       
+   /  |/  /_  __   / ___/   ____     _____   (_)  ____ _   / /  _____
+  / /|_/ / / / /   \__ \   / __ \   / ___/  / /  / __ `/  / /  / ___/
+ / /  / / /_/ /   ___/ /  / /_/ /  / /__   / /  / /_/ /  / /  (__  ) 
+/_/  /_/\__, /   /____/   \____/   \___/  /_/   \__,_/  /_/  /____/  
+       /____/                                                        
+----------------------------------------------------------------------
+
+        </pre>
       </>
     ),
   };
@@ -82,10 +161,12 @@ const TerminalBox = () => {
     >
       <div
         ref={ref}
-        className="border-b border-gray-300 flex flex-row window-header p-0 mb-0 w-full fixed top-0 left-0"
+        className="border-b border-gray-300 flex flex-row window-header terminal-window-header p-0 mb-0 w-full fixed top-0 left-0"
       >
-        <div><WindowControls target="terminal"/></div>
-        <h2 className="window-title">Terminal</h2>
+        <div>
+          <WindowControls target="terminal" />
+        </div>
+        <h2 className="window-title text-white">Terminal</h2>
       </div>
 
       <div
@@ -96,6 +177,9 @@ const TerminalBox = () => {
           showControlBar={false}
           prompt="CodeWithMEGA: ~$"
           commands={commands}
+          style={{
+            border: "none"
+          }}
           enableInput={true}
           welcomeMessage={
             <>
@@ -164,7 +248,9 @@ const TerminalBox = () => {
               </pre>
 
               <div>Type 'help' to bring up all commands.</div>
-              <div>Right-click to start typing</div>
+              <div>
+                Right-click <Mouse /> to start typing
+              </div>
             </>
           }
           className="main-terminal mt-2"

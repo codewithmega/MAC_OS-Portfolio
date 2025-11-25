@@ -5,13 +5,26 @@ import Silk from "#components/Silk";
 import Terminal from "#windows/TerminalBox";
 import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
+import { Finder, Resume, Socials, Text } from "#windows";
+import Home from "#components/Home";
 
 gsap.registerPlugin(Draggable);
 
 const App = () => {
   return (
     <main>
+      <Home className="z-99" />
+
       <Navbar />
+      <Welcome className="" />
+      <Dock className="" />
+      <TerminalContextProvider>
+        <Terminal />
+      </TerminalContextProvider>
+      <Socials />
+      <Resume />
+      <Finder />
+      <Text />
       <Silk
         speed={5}
         scale={1}
@@ -20,12 +33,6 @@ const App = () => {
         rotation={0}
         className="silk-animation"
       />
-      <Welcome className="" />
-      <Dock className=""/>
-    <TerminalContextProvider>
-      <Terminal />
-    </TerminalContextProvider>
-
     </main>
   );
 };
