@@ -13,7 +13,7 @@ const Gallery = () => {
       >
         <div className="border-b border-gray-300 bg-white flex flex-row window-header p-0 mb-10 w-full fixed top-0 left-0 z-5">
           <div>
-            <WindowControls target="resume" />
+            <WindowControls target="gallery" />
           </div>
 
           <h2 className="window-title text-black">Gallery</h2>
